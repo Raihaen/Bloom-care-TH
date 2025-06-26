@@ -78,23 +78,6 @@ poetry run mypy .
 poetry run mypy bloom_care_takehome/
 ```
 
-## Project Structure
-
-```
-bloom-care-takehome/
-├── bloom_care_takehome/     # Main package
-│   ├── __init__.py
-│   └── main.py
-├── tests/                   # Test files
-│   ├── __init__.py
-│   └── test_main.py
-├── pyproject.toml          # Project configuration
-├── README.md               # This file
-├── ASSIGNMENT.md           # Complete assignment instructions
-├── CONTRIBUTING.md         # Development guidelines
-└── .gitignore             # Git ignore rules
-```
-
 ## Technologies Used
 
 - **Poetry**: Dependency management and packaging
