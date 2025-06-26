@@ -1,0 +1,162 @@
+[
+  {
+    "id": "S1",
+    "day": "2025-06-23",
+    "start": "09:00",
+    "end": "11:00",
+    "required_skill": "hygiene",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S2",
+    "day": "2025-06-23",
+    "start": "14:00",
+    "end": "16:00",
+    "required_skill": "cooking",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S3",
+    "day": "2025-06-24",
+    "start": "08:00",
+    "end": "12:00",
+    "required_skill": "hygiene",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S4",
+    "day": "2025-06-24",
+    "start": "14:00",
+    "end": "18:00",
+    "required_skill": "cooking",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S5",
+    "day": "2025-06-24",
+    "start": "10:00",
+    "end": "12:00",
+    "required_skill": "cleaning",
+    "neighborhood": "Sud"
+  },
+  {
+    "id": "S6",
+    "day": "2025-06-25",
+    "start": "08:00",
+    "end": "12:00",
+    "required_skill": "hygiene",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S7",
+    "day": "2025-06-25",
+    "start": "14:00",
+    "end": "18:00",
+    "required_skill": "alzheim",
+    "neighborhood": "Sud"
+  },
+  {
+    "id": "S8",
+    "day": "2025-06-25",
+    "start": "16:00",
+    "end": "18:00",
+    "required_skill": "driver",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S9",
+    "day": "2025-06-26",
+    "start": "08:00",
+    "end": "12:00",
+    "required_skill": "cleaning",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S10",
+    "day": "2025-06-26",
+    "start": "13:00",
+    "end": "15:00",
+    "required_skill": "hygiene",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S11",
+    "day": "2025-06-26",
+    "start": "15:00",
+    "end": "17:00",
+    "required_skill": "cooking",
+    "neighborhood": "Sud"
+  },
+  {
+    "id": "S12",
+    "day": "2025-06-27",
+    "start": "09:00",
+    "end": "11:00",
+    "required_skill": "hygiene",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S13",
+    "day": "2025-06-27",
+    "start": "11:00",
+    "end": "14:00",
+    "required_skill": "driver",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S14",
+    "day": "2025-06-27",
+    "start": "14:00",
+    "end": "16:00",
+    "required_skill": "cleaning",
+    "neighborhood": "Sud"
+  },
+  {
+    "id": "S15",
+    "day": "2025-06-27",
+    "start": "16:00",
+    "end": "18:00",
+    "required_skill": "alzheim",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S16",
+    "day": "2025-06-28",
+    "start": "08:00",
+    "end": "10:00",
+    "required_skill": "hygiene",
+    "neighborhood": "Centre-ville"
+  },
+  {
+    "id": "S17",
+    "day": "2025-06-28",
+    "start": "12:00",
+    "end": "14:00",
+    "required_skill": "cooking",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S18",
+    "day": "2025-06-28",
+    "start": "15:00",
+    "end": "17:00",
+    "required_skill": "cleaning",
+    "neighborhood": "Sud"
+  },
+  {
+    "id": "S19",
+    "day": "2025-06-29",
+    "start": "09:00",
+    "end": "11:00",
+    "required_skill": "driver",
+    "neighborhood": "Nord"
+  },
+  {
+    "id": "S20",
+    "day": "2025-06-29",
+    "start": "13:00",
+    "end": "15:00",
+    "required_skill": "alzheim",
+    "neighborhood": "Centre-ville"
+  }
+]

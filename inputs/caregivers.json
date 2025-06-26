@@ -1,0 +1,62 @@
+[
+  {
+    "id": "C1",
+    "name": "Alice",
+    "max_hours": 35,
+    "availability": [
+      { "day": "MONDAY", "start": "08:00", "end": "12:00" },
+      { "day": "TUESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "WEDNESDAY", "start": "08:00", "end": "12:00" }
+    ],
+    "skills": ["hygiene", "driver", "alzheim"]
+  },
+  {
+    "id": "C2",
+    "name": "Marie",
+    "max_hours": 25,
+    "availability": [
+      { "day": "MONDAY", "start": "14:00", "end": "18:00" },
+      { "day": "TUESDAY", "start": "08:00", "end": "16:00" }
+    ],
+    "skills": ["cooking", "hygiene"]
+  },
+  {
+    "id": "C3",
+    "name": "Carla",
+    "max_hours": 30,
+    "availability": [
+      { "day": "MONDAY", "start": "08:00", "end": "18:00" },
+      { "day": "TUESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "WEDNESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "THURSDAY", "start": "08:00", "end": "18:00" },
+      { "day": "FRIDAY", "start": "08:00", "end": "18:00" }
+    ],
+    "skills": ["hygiene", "driver", "cleaning"]
+  },
+  {
+    "id": "C4",
+    "name": "David",
+    "max_hours": 30,
+    "availability": [
+      { "day": "MONDAY", "start": "08:00", "end": "18:00" },
+      { "day": "TUESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "WEDNESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "THURSDAY", "start": "08:00", "end": "18:00" },
+      { "day": "FRIDAY", "start": "08:00", "end": "18:00" }
+    ],
+    "skills": ["hygiene", "cleaning", "cooking"]
+  },
+  {
+    "id": "C5",
+    "name": "Samira",
+    "max_hours": 30,
+    "availability": [
+      { "day": "MONDAY", "start": "08:00", "end": "18:00" },
+      { "day": "TUESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "WEDNESDAY", "start": "08:00", "end": "18:00" },
+      { "day": "THURSDAY", "start": "08:00", "end": "18:00" },
+      { "day": "FRIDAY", "start": "08:00", "end": "18:00" }
+    ],
+    "skills": ["hygiene", "cleaning", "cooking"]
+  }
+]

@@ -1,8 +1,6 @@
 """Tests for the main module."""
 
-import pytest
-
-from bloom_care_takehome.main import hello_world
+from solver.main import hello_world
 
 
 def test_hello_world() -> None:

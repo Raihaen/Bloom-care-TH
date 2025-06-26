@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Bloom Care OR Take-home Test"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
-packages = [{include = "bloom_care_takehome"}]
+packages = [{include = "solver"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -43,7 +43,7 @@ extend-exclude = '''
 profile = "black"
 multi_line_output = 3
 line_length = 88
-known_first_party = ["bloom_care_takehome"]
+known_first_party = ["solver"]
 
 [tool.ruff]
 line-length = 88
@@ -75,7 +75,7 @@ warn_unreachable = true
 strict_equality = true
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["solver/tests"]
 python_files = ["test_*.py", "*_test.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
