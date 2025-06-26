@@ -1,0 +1,31 @@
+# Bloom Care OR Take-home Test
+
+# Python Bytecode
+__pycache__/
+
+# Packages
+*.egg
+*.egg-info
+dist/
+build/
+
+# Env
+.env
+venv/
+
+# Pytest
+.cache/
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
