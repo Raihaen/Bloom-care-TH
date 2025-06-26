@@ -59,7 +59,7 @@ Your solver should return a list of assignments. Run `poetry run python -m sched
 
 - [ ] Clone this repository (do **not** fork it)
 - [ ] Implement the features step-by-step (your commit history should be clear to follow)
-- [ ] Feel free to add files and folders and reorganise the code as you wish. Right now, it is set up so that you mostly just need to touch to the solver part.
+- [ ] Feel free to add files and folders and reorganise the code as you wish. Right now, it is set up so that you mostly just need to touch to the solver (`solver.py`) part.
 - [ ] Document your choices along the way, as you'll have to present them in the debrief interview
 - [ ] Provide clear instructions on how we can run your code
 - [ ] Publish it on GitHub (or equivalent)
