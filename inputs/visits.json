@@ -1,161 +1,181 @@
 [
   {
-    "id": "S1",
+    "id": "V1",
     "day": "2025-06-23",
     "start": "09:00",
     "end": "11:00",
+    "customer": "Marie-Anne",
     "required_skill": "hygiene",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S2",
+    "id": "V2",
     "day": "2025-06-23",
-    "start": "14:00",
-    "end": "16:00",
+    "start": "12:00",
+    "end": "14:00",
+    "customer": "Paulette",
     "required_skill": "cooking",
     "neighborhood": "Nord"
   },
   {
-    "id": "S3",
+    "id": "V3",
     "day": "2025-06-24",
     "start": "08:00",
     "end": "12:00",
+    "customer": "Marie-Anne",
     "required_skill": "hygiene",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S4",
+    "id": "V4",
     "day": "2025-06-24",
-    "start": "14:00",
-    "end": "18:00",
+    "start": "12:00",
+    "end": "14:00",
+    "customer": "Paulette",
     "required_skill": "cooking",
     "neighborhood": "Nord"
   },
   {
-    "id": "S5",
+    "id": "V5",
     "day": "2025-06-24",
     "start": "10:00",
     "end": "12:00",
+    "customer": "Gérard",
     "required_skill": "cleaning",
     "neighborhood": "Sud"
   },
   {
-    "id": "S6",
+    "id": "V6",
     "day": "2025-06-25",
     "start": "08:00",
     "end": "12:00",
+    "customer": "Marie-Anne",
     "required_skill": "hygiene",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S7",
+    "id": "V7",
     "day": "2025-06-25",
     "start": "14:00",
     "end": "18:00",
+    "customer": "Henry",
     "required_skill": "alzheim",
     "neighborhood": "Sud"
   },
   {
-    "id": "S8",
+    "id": "V8",
     "day": "2025-06-25",
     "start": "16:00",
     "end": "18:00",
+    "customer": "Pauline",
     "required_skill": "driver",
     "neighborhood": "Nord"
   },
   {
-    "id": "S9",
+    "id": "V9",
     "day": "2025-06-26",
     "start": "08:00",
     "end": "12:00",
+    "customer": "Pauline",
     "required_skill": "cleaning",
     "neighborhood": "Nord"
   },
   {
-    "id": "S10",
+    "id": "V10",
     "day": "2025-06-26",
     "start": "13:00",
     "end": "15:00",
+    "customer": "Marie-Anne",
     "required_skill": "hygiene",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S11",
+    "id": "V11",
     "day": "2025-06-26",
-    "start": "15:00",
-    "end": "17:00",
+    "start": "12:00",
+    "end": "14:00",
+    "customer": "Henry",
     "required_skill": "cooking",
     "neighborhood": "Sud"
   },
   {
-    "id": "S12",
+    "id": "V12",
     "day": "2025-06-27",
     "start": "09:00",
     "end": "11:00",
+    "customer": "Marie-Anne",
     "required_skill": "hygiene",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S13",
+    "id": "V13",
     "day": "2025-06-27",
     "start": "11:00",
     "end": "14:00",
+    "customer": "Pauline",
     "required_skill": "driver",
     "neighborhood": "Nord"
   },
   {
-    "id": "S14",
+    "id": "V14",
     "day": "2025-06-27",
     "start": "14:00",
     "end": "16:00",
+    "customer": "Gérard",
     "required_skill": "cleaning",
     "neighborhood": "Sud"
   },
   {
-    "id": "S15",
+    "id": "V15",
     "day": "2025-06-27",
     "start": "16:00",
     "end": "18:00",
+    "customer": "Francine",
     "required_skill": "alzheim",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S16",
+    "id": "V16",
     "day": "2025-06-28",
     "start": "08:00",
     "end": "10:00",
+    "customer": "Marie-Anne",
     "required_skill": "hygiene",
     "neighborhood": "Centre-ville"
   },
   {
-    "id": "S17",
+    "id": "V17",
     "day": "2025-06-28",
     "start": "12:00",
     "end": "14:00",
+    "customer": "Paulette",
     "required_skill": "cooking",
     "neighborhood": "Nord"
   },
   {
-    "id": "S18",
+    "id": "V18",
     "day": "2025-06-28",
     "start": "15:00",
     "end": "17:00",
+    "customer": "Gérard",
     "required_skill": "cleaning",
     "neighborhood": "Sud"
   },
   {
-    "id": "S19",
+    "id": "V19",
     "day": "2025-06-29",
     "start": "09:00",
     "end": "11:00",
+    "customer": "Pauline",
     "required_skill": "driver",
     "neighborhood": "Nord"
   },
   {
-    "id": "S20",
+    "id": "V20",
     "day": "2025-06-29",
     "start": "13:00",
     "end": "15:00",
+    "customer": "Francine",
     "required_skill": "alzheim",
     "neighborhood": "Centre-ville"
   }

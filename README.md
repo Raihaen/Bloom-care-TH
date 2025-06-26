@@ -28,7 +28,7 @@ You are tasked with building a **staff scheduler** to help our clients optimise 
 
 ### 🚀 Bonus Objectives (stretch)
 
-Once the basics work, try optimizing further. Pick **one** or more of these:
+Once the basics work, if you still have some time, you can try optimizing further. Pick one or more of these:
 
 - **Continuity of care**: minimize the number of different caregivers assigned to the same customer across multiple days (clients prefer familiar faces!)
 - **Travel efficiency**: minimize how often caregivers switch **neighborhoods** during a single day (less travel time = better quality of life for caregivers)
@@ -37,16 +37,35 @@ Once the basics work, try optimizing further. Pick **one** or more of these:
 
 Please try to not spend more than 5 hours on this assignment.
 
-**How to Successfully Complete this Technical Assignment**:
+#### Expected output
+
+Your solver should return a list of assignments. Run `poetry run python -m scheduler` to evaluate your output (see [CONTRIBUTING.md](CONTRIBUTING.md))
+
+```python
+  assignments = [
+    {
+      visit_id: "V1",
+      caregiver_id: "C1"
+    },
+    {
+      visit_id: "V2",
+      caregiver_id: "C2"
+    },
+    # and so on...
+  ]
+```
+
+#### How to Successfully Complete this Technical Assignment
 
 - [ ] Clone this repository (do **not** fork it)
 - [ ] Implement the features step-by-step (your commit history should be clear to follow)
+- [ ] Feel free to add files and folders and reorganise the code as you wish. Right now, it is set up so that you mostly just need to touch to the solver part.
 - [ ] Document your choices along the way, as you'll have to present them in the debrief interview
 - [ ] Provide clear instructions on how we can run your code
 - [ ] Publish it on GitHub (or equivalent)
 - [ ] Send us the link, along with an estimate of how much time you spent on this assignment
 
-**What you will be evaluated on**:
+#### What you will be evaluated on
 
 - [ ] You followed the instructions
 - [ ] Your architecture and design choices are clearly documented
@@ -67,7 +86,7 @@ Feel free to use AI.
 
 **Choose your stack**
 
-You can use any tool and language you deem suitable.
+You can use any tool and language you deem suitable. If you don't know where to start, you can use `CP-SAT` from `OR-Tools`.
 
 **End state**
 
@@ -80,3 +99,4 @@ The last state of your code should be clean and ready to be reviewed by peers in
 ## Documentation
 
 - **[CONTRIBUTING.md](CONTRIBUTING.md)**: Development help and code quality standards
+- **[SCORING.md](SCORING.md)**: Detailed explanation of how your solution is evaluated and scored

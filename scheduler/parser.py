@@ -1,5 +1,3 @@
-"""Main module for Bloom Care OR Take-home Test."""
-
 import json
 
 from .models import Availability, Caregiver, Visit
@@ -24,6 +22,7 @@ def load_visits(file_path: str = "inputs/visits.json") -> list[Visit]:
             day=visit_data["day"],
             start=visit_data["start"],
             end=visit_data["end"],
+            customer=visit_data["customer"],
             required_skill=visit_data["required_skill"],
             neighborhood=visit_data["neighborhood"],
         )
@@ -63,16 +62,3 @@ def load_caregivers(file_path: str = "inputs/caregivers.json") -> list[Caregiver
         caregivers.append(caregiver)
 
     return caregivers
-
-
-def main() -> None:
-    """Main entry point for the application."""
-    # Load the data
-    visits = load_visits()
-    caregivers = load_caregivers()
-
-    print(f"Loaded {len(visits)} visits and {len(caregivers)} caregivers")
-
-
-if __name__ == "__main__":
-    main()

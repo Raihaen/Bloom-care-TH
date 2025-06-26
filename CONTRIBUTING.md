@@ -31,7 +31,7 @@
 ### Running the application
 
 ```bash
-poetry run python -m solver
+poetry run python -m scheduler
 ```
 
 ### Running tests

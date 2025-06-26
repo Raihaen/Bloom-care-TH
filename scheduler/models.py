@@ -11,6 +11,7 @@ class Visit:
     day: str
     start: str
     end: str
+    customer: str
     required_skill: str
     neighborhood: str
 
@@ -33,3 +34,11 @@ class Caregiver:
     max_hours: int
     availability: list[Availability]
     skills: list[str]
+
+
+@dataclass
+class Assignment:
+    """Represents the assignment of a caregiver to a visit."""
+
+    visit_id: str
+    caregiver_id: str
