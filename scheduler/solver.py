@@ -12,7 +12,8 @@ def solve(visits: list[Visit], caregivers: list[Caregiver]) -> list[Assignment]:
         caregivers: List of available caregivers
 
     Returns:
-        List of Assignment objects representing which caregiver is assigned to which visit
+        List of Assignment objects representing which caregiver
+          is assigned to which visit
     """
     # TODO: Implement the scheduling algorithm
     # This should return a list of Assignment objects
