@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 from .models import Availability, Caregiver, Visit
 
@@ -19,9 +20,8 @@ def load_visits(file_path: str = "inputs/visits.json") -> list[Visit]:
     for visit_data in data:
         visit = Visit(
             id=visit_data["id"],
-            day=visit_data["day"],
-            start=visit_data["start"],
-            end=visit_data["end"],
+            start=datetime.strptime(visit_data["start"], "%Y-%m-%d %H:%M"),
+            end=datetime.strptime(visit_data["end"], "%Y-%m-%d %H:%M"),
             customer=visit_data["customer"],
             required_skill=visit_data["required_skill"],
             neighborhood=visit_data["neighborhood"],
@@ -47,8 +47,14 @@ def load_caregivers(file_path: str = "inputs/caregivers.json") -> list[Caregiver
     for caregiver_data in data:
         availability_list = []
         for avail_data in caregiver_data["availability"]:
+            # Parse time strings to datetime objects (using a dummy date)
+            start_time = datetime.strptime(avail_data["start"], "%H:%M").time()
+            end_time = datetime.strptime(avail_data["end"], "%H:%M").time()
+
             availability = Availability(
-                day=avail_data["day"], start=avail_data["start"], end=avail_data["end"]
+                day=avail_data["day"],
+                start=start_time,
+                end=end_time,
             )
             availability_list.append(availability)
 

@@ -1,31 +1,16 @@
 """Evaluator module for the Bloom Care scheduling results."""
 
 from collections import defaultdict
-from datetime import datetime, time
 from typing import Any
 
 from .models import Assignment, Caregiver, Visit
 
 
-def _parse_time(time_str: str) -> time:
-    """Parse time string in format 'HH:MM' to time object."""
-    return datetime.strptime(time_str, "%H:%M").time()
-
-
-def _times_overlap(start1: str, end1: str, start2: str, end2: str) -> bool:
-    """Check if two time ranges overlap."""
-    s1, e1 = _parse_time(start1), _parse_time(end1)
-    s2, e2 = _parse_time(start2), _parse_time(end2)
-    return s1 < e2 and s2 < e1
-
-
 def _is_caregiver_available(caregiver: Caregiver, visit: Visit) -> bool:
     """Check if caregiver is available for the given visit."""
     for availability in caregiver.availability:
-        if availability.day == visit.day:
-            return _times_overlap(
-                availability.start, availability.end, visit.start, visit.end
-            )
+        if availability.check_availability(visit):
+            return True
     return False
 
 
@@ -38,14 +23,7 @@ def _calculate_caregiver_hours(
     for assignment in assignments:
         if assignment.caregiver_id == caregiver_id:
             visit = next(v for v in visits if v.id == assignment.visit_id)
-            start_time = _parse_time(visit.start)
-            end_time = _parse_time(visit.end)
-
-            # Calculate hours difference
-            start_minutes = start_time.hour * 60 + start_time.minute
-            end_minutes = end_time.hour * 60 + end_time.minute
-            hours = (end_minutes - start_minutes) / 60.0
-            total_hours += hours
+            total_hours += (visit.end - visit.start).total_seconds() / 3600.0
 
     return total_hours
 
@@ -107,7 +85,7 @@ def _calculate_travel_efficiency_score(
     caregiver_day_assignments = defaultdict(list)
     for assignment in assignments:
         visit = visit_lookup[assignment.visit_id]
-        key = (assignment.caregiver_id, visit.day)
+        key = (assignment.caregiver_id, visit.start.strftime("%A"))
         caregiver_day_assignments[key].append((visit, assignment))
 
     # Calculate switches for each caregiver-day combination
@@ -181,9 +159,7 @@ def _get_overlap_violations(
             visit1 = visit_lookup[assignment1.visit_id]
             for assignment2 in caregiver_assigns[i + 1 :]:
                 visit2 = visit_lookup[assignment2.visit_id]
-                if visit1.day == visit2.day and _times_overlap(
-                    visit1.start, visit1.end, visit2.start, visit2.end
-                ):
+                if visit1.overlaps(visit2):
                     violations.append(
                         {
                             "caregiver_id": caregiver_id,
