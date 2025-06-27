@@ -42,35 +42,21 @@ poetry run pytest
 
 ### Code Formatting and linting
 
-We use several tools to maintain consistent code formatting:
-
-#### Black (Code Formatter)
+We use several tools to maintain consistent code formatting. Your IDE should run them automatically, but you can run them in your terminal if needed.
 
 ```bash
 # Format all Python files
 poetry run black .
-```
 
-#### isort (Import Sorter)
-
-```bash
 # Sort imports in all Python files
 poetry run isort .
-```
 
-#### Ruff (Fast Python Linter)
-
-```bash
 # Run linting checks
 poetry run ruff check .
 
 # Fix automatically fixable issues
 poetry run ruff check --fix .
-```
 
-#### MyPy (Static Type Checker)
-
-```bash
 # Run type checking
 poetry run mypy .
 
