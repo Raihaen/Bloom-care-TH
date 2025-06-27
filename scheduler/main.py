@@ -1,6 +1,6 @@
 """Main module for Bloom Care OR Take-home Test."""
 
-from .evaluator import evaluate
+from .evaluator import display_caregiver_schedules, evaluate
 from .parser import load_caregivers, load_visits
 from .solver import solve
 
@@ -47,6 +47,9 @@ def main() -> None:
     print("\nOptimization Metrics:")
     print(f"  Continuity Score: {metrics['continuity_score']:.2f}")
     print(f"  Travel Efficiency Score: {metrics['travel_efficiency_score']:.2f}")
+
+    # Display caregiver schedules
+    display_caregiver_schedules(assignments, visits, caregivers)
 
 
 if __name__ == "__main__":

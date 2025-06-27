@@ -204,6 +204,98 @@ def _check_constraint_violations(
     }
 
 
+def display_caregiver_schedules(
+    assignments: list[Assignment], visits: list[Visit], caregivers: list[Caregiver]
+) -> None:
+    """
+    Display detailed schedules for each caregiver.
+
+    Shows each caregiver's assignments organized by day, with multiple visits per day
+    properly handled.
+    """
+    # Create lookups
+    visit_lookup = {visit.id: visit for visit in visits}
+
+    # Group assignments by caregiver
+    caregiver_assignments = defaultdict(list)
+    for assignment in assignments:
+        visit = visit_lookup[assignment.visit_id]
+        caregiver_assignments[assignment.caregiver_id].append((visit, assignment))
+
+    print("\n" + "=" * 70)
+    print("CAREGIVER SCHEDULES")
+    print("=" * 70)
+
+    for caregiver in caregivers:
+        caregiver_id = caregiver.id
+        name = caregiver.name
+        max_hours = caregiver.max_hours
+        skills = ", ".join(caregiver.skills)
+
+        # Calculate utilization stats
+        assigned_hours = _calculate_caregiver_hours(assignments, visits, caregiver.id)
+        assigned_visits = len(
+            [a for a in assignments if a.caregiver_id == caregiver.id]
+        )
+        utilization = (
+            (assigned_hours / caregiver.max_hours) * 100
+            if caregiver.max_hours > 0
+            else 0
+        )
+
+        # Get this caregiver's assignments
+        if caregiver_id not in caregiver_assignments:
+            print(f"\n{caregiver_id} - {name} (Max: {max_hours}h, Skills: {skills})")
+            print(
+                f"   {assigned_hours:.1f}/{max_hours}h ({utilization:.0f}%) - "
+                f"{assigned_visits} visits"
+            )
+            print("   No assignments")
+            continue
+
+        assignments_for_caregiver = caregiver_assignments[caregiver_id]
+
+        print(
+            f"\n{caregiver_id} - {name} {assigned_hours:.1f}/{max_hours}h "
+            f"({utilization:.0f}%) - {assigned_visits} visits"
+        )
+        print("=" * 70)
+
+        # Group assignments by day
+        day_assignments = defaultdict(list)
+        for visit, assignment in assignments_for_caregiver:
+            day = visit.start.strftime("%A")
+            day_assignments[day].append((visit, assignment))
+
+        # Display assignments by day
+        for day in [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ]:
+            if day in day_assignments:
+                day_visits = day_assignments[day]
+                # Sort visits by start time
+                day_visits.sort(key=lambda x: x[0].start)
+
+                print(f"\n{day}:")
+                for visit, assignment in day_visits:
+                    start_time = visit.start.strftime("%H:%M")
+                    end_time = visit.end.strftime("%H:%M")
+                    duration = (visit.end - visit.start).total_seconds() / 3600.0
+                    print(
+                        f"   {start_time}-{end_time} ({duration:.1f}h) "
+                        f"{assignment.visit_id} - {visit.customer} "
+                        f"({visit.neighborhood}) [{visit.required_skill}]"
+                    )
+
+        print("=" * 70)
+
+
 def evaluate(
     assignments: list[Assignment], visits: list[Visit], caregivers: list[Caregiver]
 ) -> dict[str, Any]:
