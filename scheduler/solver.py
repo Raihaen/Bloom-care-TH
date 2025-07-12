@@ -17,11 +17,7 @@ def solve(visits: list[Visit], caregivers: list[Caregiver]) -> list[Assignment]:
         List of Assignment objects representing which caregiver
           is assigned to which visit
     """
-    # TODO: Implement the scheduling algorithm
-    # This should return a list of Assignment objects
-    # representing which caregiver is assigned to which visit
-
-    #return []
+   
 
     # we start by ininitializing the CP-SAT model
     model = cp_model.CpModel() 
@@ -76,6 +72,7 @@ def solve(visits: list[Visit], caregivers: list[Caregiver]) -> list[Assignment]:
     # if objective_terms:
     #     model.Maximize(sum (objective_terms))
 
+    
     # minimize the maximum number of unique caregivers assigned to any customer
     max_unique_caregivers = minimize_max_unique_caregivers_per_customer(model,caregiver_visit,caregivers,visits)
     model.Minimize(max_unique_caregivers)

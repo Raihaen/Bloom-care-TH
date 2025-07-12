@@ -6,6 +6,19 @@ from .models import Assignment, Caregiver, Visit
 
 
 def minimize_max_unique_caregivers_per_customer(model, caregiver_visit, caregivers, visits):
+    """
+    Minimize the maximum number of unique caregivers assigned to any customer.
+
+    Args: 
+        model: The CP-SAT model
+        caregiver_visit: Dictionary mapping (caregiver_index, visit_index) to 
+            (this is our main decision variable)
+        caregivers: List of caregivers
+        visits: List of visits
+    Returns:
+        max_unique_caregivers: The variable representing the maximum number of 
+        unique caregivers assigned to any customer
+    """
     customers = list(set(visit.customer for visit in visits))
     
     # Mapping: customer → list of caregiver assigned (BoolVar)
