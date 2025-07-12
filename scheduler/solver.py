@@ -3,6 +3,7 @@
 from .models import Assignment, Caregiver, Visit
 from ortools.sat.python import cp_model
 from datetime import datetime, timedelta 
+from .optimiser import minimize_max_unique_caregivers_per_customer
 
 def solve(visits: list[Visit], caregivers: list[Caregiver]) -> list[Assignment]:
     """
@@ -75,9 +76,9 @@ def solve(visits: list[Visit], caregivers: list[Caregiver]) -> list[Assignment]:
     # if objective_terms:
     #     model.Maximize(sum (objective_terms))
 
-  
-
-
+    # minimize the maximum number of unique caregivers assigned to any customer
+    max_unique_caregivers = minimize_max_unique_caregivers_per_customer(model,caregiver_visit,caregivers,visits)
+    model.Minimize(max_unique_caregivers)
 
     # code to start the solver
 
